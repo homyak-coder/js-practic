@@ -19,7 +19,7 @@ console.log(
 );
 
 let screensLower = screens.toLowerCase();
-console.log(screensLower.split());
+console.log(screensLower.split(", "));
 
 let percentToWork = fullPrice * (rollback / 100);
 console.log(percentToWork);
