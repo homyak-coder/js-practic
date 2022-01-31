@@ -16,7 +16,7 @@ let cutMul = powStr.slice(0, 2);
 
 console.log(cutMul);
 
-let lang = prompt("Введите названия языка (lang, ru)  ");
+let lang = prompt("Введите названия языка (ru, en)  ");
 
 if (lang == "ru") {
   console.log("Понедельник");
@@ -26,7 +26,7 @@ if (lang == "ru") {
   console.log("Пятница");
   console.log("Суббота");
   console.log("Воскресенье");
-} else {
+} else if (lang == "en") {
   console.log("Monday");
   console.log("Tuesday");
   console.log("Wensday");
@@ -34,6 +34,8 @@ if (lang == "ru") {
   console.log("Friday");
   console.log("Saturday");
   console.log("Sunday");
+} else {
+  console.log("Вы сделали нерпавильный выбор");
 }
 
 switch (lang) {
@@ -57,18 +59,16 @@ switch (lang) {
     break;
 }
 
-let arrayLan = [
-  [
-    "Понедельник",
-    "Вторник",
-    "Среда",
-    "Четверг",
-    "Пятница",
-    "Суббота",
-    "Воскресенье",
-  ],
-  ["Monday", "Tuesday", "Wensday", "Thirsday", "Friday", "Saturday", "Sunday"],
-];
+let massiv = {
+  ru: "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье",
+  en: "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday",
+};
+console.log(massiv[lang]);
 
-alert(arrayLan[0]);
-alert(arrayLan[1]);
+let namePerson = prompt("Введите имя преподавателя");
+let nameAnswer =
+  namePerson == "Артём"
+    ? console.log("директор")
+    : namePerson == "Александр"
+    ? console.log("Преподаватель")
+    : console.log("Что-то здесь не так");
