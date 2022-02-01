@@ -74,3 +74,17 @@ let nameAnswer =
     : namePerson == "Александр"
     ? console.log("Преподаватель")
     : console.log("Что-то здесь не так");
+
+function hardTaskFour(variable) {
+  if (typeof variable !== "string") {
+    console.log("Аргумент не является строкой");
+  } else if (variable.length > 0 && variable.length < 30) {
+    console.log(variable.trim());
+  } else {
+    console.log(variable.trim().slice(0, 30) + "...");
+  }
+}
+
+let str1 = " Blablalblalbalablablablblablabsdcsdcsdcdscsdcdscdscdscs   ";
+
+hardTaskFour(str1);
