@@ -12,9 +12,7 @@ let service2 = prompt("Какой дополнительный тип услуг
 let sercivePrice2 = +prompt("Сколько это будет стоить?");
 
 let fullPrice = screenPrice + servicePrice1 + sercivePrice2;
-let frilancMoney = 0.1 * fullPrice;
-let servicePercentPrice = Math.ceil(fullPrice - frilancMoney);
-console.log(servicePercentPrice);
+let servicePercentPrice = Math.ceil(fullPrice - fullPrice * (rollback / 100));
 
 if (fullPrice > 30000) {
   console.log("Даём скидку в 10%");
@@ -44,9 +42,6 @@ console.log(
     fullPrice +
     " рублей"
 );
-
-let screensLower = screens.toLowerCase();
-console.log(screensLower.split(", "));
-
-let percentToWork = fullPrice * (rollback / 100);
-console.log(percentToWork);
+console.log(screens.toLowerCase().split(", "));
+console.log(fullPrice * (rollback / 100));
+console.log(servicePercentPrice);
