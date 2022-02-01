@@ -1,3 +1,5 @@
+"use strict";
+
 let num = 266219;
 let mul = 1;
 let str = String(num);
