@@ -88,3 +88,42 @@ function hardTaskFour(variable) {
 let str1 = " Blablalblalbalablablablblablabsdcsdcsdcdscsdcdscdscdscs   ";
 
 hardTaskFour(str1);
+
+let arr = [
+  "25345345",
+  "341235",
+  "786433",
+  "484345",
+  "546446",
+  "4324234",
+  "86764352",
+];
+
+arr.forEach((item) => {
+  if (item.startsWith("2") || item.startsWith("4")) {
+    console.log(item);
+  }
+});
+
+function isPrime(num) {
+  for (let i = 2, max = Math.sqrt(num); i <= max; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+function getPrimes(num) {
+  const primes = [];
+
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i)) {
+      primes.push(i);
+      console.log("Делители этого числа: 1 и" + i);
+    }
+  }
+  return primes;
+}
+
+console.log(getPrimes(100));
