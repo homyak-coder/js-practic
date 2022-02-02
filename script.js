@@ -3,7 +3,6 @@
 let title = prompt("Как называется Ваш проект?");
 let screens = prompt("Какие типы экранов нужно разобрать?");
 let screenPrice = +prompt("Сколько будет стоить данная работа?");
-let screensLower = screens.toLowerCase();
 let rollback = 4;
 let adaptive = Boolean(prompt("Нужен ли адаптив на сайте?"));
 let service1 = prompt("Какой дополнительный тип услуги нужен?");
@@ -61,6 +60,6 @@ showTypeOf(title);
 showTypeOf(fullPrice);
 showTypeOf(adaptive);
 
-console.log(screensLower.split(", "));
+console.log(screens.toLowerCase().split(", "));
 console.log(getRollbackMessage(fullPrice));
 console.log(servicePercentPrice);
