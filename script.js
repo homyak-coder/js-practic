@@ -51,7 +51,7 @@ const appData = {
         price = prompt("Cколько это будет стоить");
       } while (!appData.isNumber(price));
 
-      appData.services[name] = +price;
+      appData.services[name + "" + i] = +price;
     }
 
     appData.adaptive = confirm("Нужен ли адаптив на сайте?");
@@ -61,6 +61,9 @@ const appData = {
     for (let screen of appData.screens) {
       appData.screenPrice += +screen.price;
     }
+    // let result = appData.screens.price.reduce(function (sum, current) {
+    //   appData.screenPrice +=
+    // }, 0);
     for (let key in appData.services) {
       appData.allServicePrices += appData.services[key];
     }
