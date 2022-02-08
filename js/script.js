@@ -12,6 +12,35 @@
 // let service2;
 // let serviceCost;
 
+const calculator = document.getElementsByTagName("h1");
+console.log(calculator[0]);
+const buttons = document.getElementsByClassName("handler_btn");
+console.log(buttons);
+const plus = document.querySelector(".screen-btn");
+console.log(plus);
+const other = document.querySelectorAll(".percent");
+console.log(other);
+const items = document.querySelectorAll(".number");
+console.log(items);
+const range = document
+  .querySelector(".rollback")
+  .querySelector('input[type="range"]');
+console.log(range);
+const value = document.querySelector(".rollback").querySelector(".range-value");
+console.log(value);
+const totalInput = document.getElementsByClassName("total-input");
+const totalInputFirst = totalInput[0];
+const totalInputSecond = totalInput[1];
+const totalInputThird = totalInput[2];
+const totalInputFourth = totalInput[3];
+const totalInputFifth = totalInput[4];
+console.log(totalInputFirst);
+console.log(totalInputSecond);
+console.log(totalInputThird);
+console.log(totalInputFourth);
+console.log(totalInputFifth);
+let screenDOM = document.querySelectorAll(".screen");
+console.log(screenDOM);
 const appData = {
   title: "",
   screens: [],
@@ -127,4 +156,4 @@ const appData = {
   },
 };
 
-appData.start();
+// appData.start();
